@@ -36,3 +36,5 @@
     * Test class which can be run
 
 ## Example of test running
+[Test running in DEBUG mode](screencapture/PuppeteerTest_DEBUG.mkv) \
+[Test running in RUN mode](screencapture/PuppeteerTest_RUN.mkv)
