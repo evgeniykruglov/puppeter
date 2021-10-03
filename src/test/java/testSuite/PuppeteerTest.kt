@@ -1,5 +1,6 @@
 package testSuite
 
+import consts.WebElements.ARIA_CHECKED
 import consts.WebElements.ITEM
 import consts.WebElements.NEXT_CHECKBOX_INPUT
 import consts.WebElements.POPUP_BTN_CLOSE
@@ -15,6 +16,7 @@ import testSuite.Driver.pressKey
 import testSuite.Driver.switchToLastTab
 import testSuite.Driver.takeScreenshot
 import testSuite.Driver.type
+import testSuite.Driver.waitForElement
 
 
 class PuppeteerTest {
@@ -29,7 +31,8 @@ class PuppeteerTest {
                 pressKey(SEARCH_KEY, Keys.RETURN)
                 clickSafe(POPUP_BTN_CLOSE)
                 getElements(NEXT_CHECKBOX_INPUT)?.first()?.click()
-                getElements(ITEM)?.get(3)?.click()
+                waitForElement(ARIA_CHECKED)
+                getElements(ITEM)?.get(2)?.click()
                 switchToLastTab()
                 takeScreenshot()
             } finally {

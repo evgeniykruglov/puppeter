@@ -55,7 +55,7 @@ object Driver {
     }
 
     fun waitForElement(locator: By?) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator))
+        wait.until(ExpectedConditions.elementToBeSelected(locator))
     }
 
     fun switchToLastTab() {
